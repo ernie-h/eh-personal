@@ -10,7 +10,7 @@ const styles = {
     }
 };
 
-export class HomepageLayout extends Component {
+export class SkillsLayout extends Component {
     render() {
         return (
             <div style={styles.wrapper}>
@@ -20,8 +20,8 @@ export class HomepageLayout extends Component {
                     container
                     justify='center'>
                     <Typography variant='display4' item='true'>
-                        Ernie Hao
-              </Typography>
+                        Skills
+                    </Typography>
                 </Grid>
                 <div style={styles.titleSpacing}>
                 </div>
@@ -30,4 +30,4 @@ export class HomepageLayout extends Component {
     }
 }
 
-export default HomepageLayout;
+export default SkillsLayout;

@@ -6,6 +6,11 @@ import 'typeface-roboto';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import HomepageLayout from './containers/HomepageLayout';
+import { AboutLayout } from './containers/AboutLayout';
+import { GoalsLayout } from './containers/GoalsLayout';
+import { SkillsLayout } from './containers/SkillsLayout';
+import { ProjectsLayout } from './containers/ProjectsLayout';
+import { ContactLayout } from './containers/ContactLayout';
 
 const mainTheme = createMuiTheme({
     palette: {
@@ -27,7 +32,15 @@ const mainTheme = createMuiTheme({
   
 class App extends React.Component {
     render() {
-        return (<HomepageLayout />);
+        return (<div>
+        <HomepageLayout />
+        <AboutLayout />
+        <GoalsLayout/>
+        <SkillsLayout/>
+        <ProjectsLayout />
+        <ContactLayout />
+        </div>
+        );
     }
 }
 
