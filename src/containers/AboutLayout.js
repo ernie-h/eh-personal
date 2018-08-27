@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Grid, Typography, Avatar } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 
-import AboutInfo from '../components/AboutInfo';
 import Profile from '../assets/profile.JPG';
 import Batman from '../assets/icons/batman.png';
 import Coffee from '../assets/icons/coffee.png';
@@ -9,6 +8,8 @@ import HK from '../assets/icons/hk.png';
 import NEU from '../assets/icons/neu.png';
 import Bicycle from '../assets/icons/bicycle.png';
 import Personality from '../assets/icons/personality.png';
+
+import AboutInfo from '../components/AboutInfo';
 
 const styles = {
   wrapper: {
@@ -21,11 +22,11 @@ const styles = {
   header: {
     color: '#2d80c4',
     backgroundColor: '#ffffff'
-},
+  },
   profile: {
     width: 400,
     height: 530,
-    boxShadow:'8px 8px 2px #e3e4e5',
+    boxShadow: '8px 8px 2px #e3e4e5',
     border: 'solid 8px white'
 
   },

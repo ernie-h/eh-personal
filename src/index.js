@@ -6,11 +6,11 @@ import 'typeface-roboto';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import HomepageLayout from './containers/HomepageLayout';
-import { AboutLayout } from './containers/AboutLayout';
-import { GoalsLayout } from './containers/GoalsLayout';
-import { SkillsLayout } from './containers/SkillsLayout';
-import { ProjectsLayout } from './containers/ProjectsLayout';
-import { ContactLayout } from './containers/ContactLayout';
+import AboutLayout  from './containers/AboutLayout';
+import GoalsLayout from './containers/GoalsLayout';
+import SkillsLayout from './containers/SkillsLayout';
+import ProjectsLayout from './containers/ProjectsLayout';
+import ContactLayout from './containers/ContactLayout';
 
 const mainTheme = createMuiTheme({
     palette: {
