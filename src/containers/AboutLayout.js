@@ -25,7 +25,8 @@ const styles = {
   profile: {
     width: 400,
     height: 530,
-    boxShadow:'8px 8px 2px #e3e4e5'
+    boxShadow:'8px 8px 2px #e3e4e5',
+    border: 'solid 8px white'
 
   },
   aboutInfo: {
@@ -59,7 +60,7 @@ export class AboutLayout extends Component {
             variant='display3'
             item='true'
             style={styles.header}>
-            Facts.
+            facts
           </Typography>
           <Grid
             container

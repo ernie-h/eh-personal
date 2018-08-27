@@ -7,6 +7,10 @@ const styles = {
     wrapper: {
         height: '780px',
         backgroundImage: `url(${backgroundImage})`,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
     },
     titleSpacing: {
         height: '300px'
@@ -29,11 +33,11 @@ export class HomepageLayout extends Component {
                     container
                     direction='column'
                     alignItems='center'
-                    >
-                     <Typography variant='title' item='true' style={styles.text}>
+                >
+                    <Typography variant='title' item='true' style={styles.text}>
                         <em>Hiya, I'm</em>
-              </Typography>
-                
+                    </Typography>
+
                     <Typography className="bg-light rounded pl-3 pr-3 mt-2" variant='display3' item='true' style={styles.name}>
                         ernie hao
               </Typography>

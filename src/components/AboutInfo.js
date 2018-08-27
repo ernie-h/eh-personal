@@ -11,7 +11,7 @@ const styles = {
         color: '#2d80c4',
     },
     text: {
-        backgroundColor: '#ffffff'
+        // backgroundColor: '#ffffff'
 
     }
 };
