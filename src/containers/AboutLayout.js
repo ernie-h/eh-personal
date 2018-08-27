@@ -13,7 +13,8 @@ import AboutInfo from '../components/AboutInfo';
 
 const styles = {
   wrapper: {
-    height: 880,
+    display: 'block',
+    overflow: 'auto',
     backgroundColor: '#f4f4f4'
   },
   titleSpacing: {
@@ -49,7 +50,8 @@ const texts = {
 export class AboutLayout extends Component {
   render() {
     return (
-      <div style={styles.wrapper}>
+      <Grid
+        style={styles.wrapper}>
         <div style={styles.titleSpacing}>
         </div>
         <Grid
@@ -66,7 +68,8 @@ export class AboutLayout extends Component {
           <Grid
             container
             justify='space-around'
-            className='mt-4'>
+            className='mt-4'
+            xl='1'>
             <div>
               <div item='true' style={styles.aboutInfo}>
                 <AboutInfo text={texts.hk} icon={HK} header='home' />
@@ -98,7 +101,7 @@ export class AboutLayout extends Component {
         </Grid>
         <div style={styles.titleSpacing}>
         </div>
-      </div>
+      </Grid>
     );
   }
 }

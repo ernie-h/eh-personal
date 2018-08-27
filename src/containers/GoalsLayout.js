@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import { Grid, Typography } from '@material-ui/core';
+
+import Teddy from '../assets/tr.png';
 import { ValueInfo } from '../components/ValueInfo';
 
 const styles = {
     wrapper: {
-        height: 1080,
-        backgroundColor: '#2d80c4'
+        display: 'block',
+        overflow: 'auto',
+        backgroundColor: '#2d80c4',
+        backgroundImage: `url(${Teddy})`,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'start',
+        backgroundRepeat: 'no-repeat',
+
     },
     titleSpacing: {
         height: '70px',
@@ -14,18 +22,11 @@ const styles = {
         color: '#2d80c4',
         backgroundColor: '#f4f4f4'
     },
-    profile: {
-        width: 400,
-        height: 530,
-        boxShadow: '8px 8px 2px #e3e4e5',
-        border: 'solid 8px white'
-
-    },
     valueInfoBox: {
-
-        width: 900,
-        height: 110,
-        marginBottom: 25,
+        display: 'inline-block',
+        overflow: 'auto',
+        maxWidth: 650,
+        margin: 20,
         padding: 40,
         backgroundColor: '#ffffff',
         borderRadius: '15px 50px 30px'
@@ -46,13 +47,16 @@ const texts = {
 export class GoalsLayout extends Component {
     render() {
         return (
-            <div style={styles.wrapper}>
+            <Grid 
+                container 
+                style={styles.wrapper}>
                 <div style={styles.titleSpacing}>
                 </div>
                 <Grid
                     container
                     alignItems='center'
-                    direction='column'>
+                    direction='column'
+                    xl='auto'>
                     <Typography
                         className='rounded pl-5 pr-5 pb-2 mb-5'
                         variant='display3'
@@ -60,40 +64,28 @@ export class GoalsLayout extends Component {
                         style={styles.header}>
                         values
                     </Typography>
-                    <Grid container
-                        justify='center'
-                        style={styles.valueInfoBox}>
+                    <div style={styles.valueInfoBox}>
                         <ValueInfo text={texts.one} />
-                    </Grid>
-                    <Grid container
-                        justify='center'
-                        style={styles.valueInfoBox}>
+                    </div>
+                    <div style={styles.valueInfoBox}>
                         <ValueInfo text={texts.two} />
-                    </Grid>
-                    <Grid container
-                        justify='center'
-                        style={styles.valueInfoBox}>
+                    </div>
+                    <div style={styles.valueInfoBox}>
                         <ValueInfo text={texts.three} />
-                    </Grid>
-                    <Grid container
-                        justify='center'
-                        style={styles.valueInfoBox}>
+                    </div>
+                    <div style={styles.valueInfoBox}>
                         <ValueInfo text={texts.four} />
-                    </Grid>
-                    <Grid container
-                        justify='center'
-                        style={styles.valueInfoBox}>
+                    </div>
+                    <div style={styles.valueInfoBox}>
                         <ValueInfo text={texts.five} />
-                    </Grid>
-                    <Grid container
-                        justify='center'
-                        style={styles.valueInfoBox}>
+                    </div>
+                    <div style={styles.valueInfoBox}>
                         <ValueInfo text={texts.six} />
-                    </Grid>
+                    </div>
                 </Grid>
                 <div style={styles.titleSpacing}>
                 </div>
-            </div>
+            </Grid>
         );
     }
 }

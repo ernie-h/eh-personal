@@ -6,6 +6,7 @@ const styles = {
     icon: {
         width: 48,
         height: 48,
+        marginTop: 30,
     },
     header: {
         color: '#2d80c4',
@@ -27,7 +28,7 @@ const AboutInfo = ({ icon, text, header }) => {
             </Typography>
             <Typography
                 style={styles.text}
-                className='text-secondary rounded pt-2 pb-2 pl-2 pr-2 mt-2'
+                className='text-secondary rounded pt-2 pb-2 pl-2 pr-2'
                 variant='body2'
                 align='center'>
                 {text}
