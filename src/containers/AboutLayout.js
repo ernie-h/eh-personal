@@ -42,7 +42,7 @@ const texts = {
   hk: 'I\'m from the beautiful city of Hong Kong. I went to an American international school and am fluent in English',
   neu: 'I\'m a third-year student at Northeastern studying Computer Science and Finance and feel blessed to call Boston my new home',
   movies: 'Movies make me laugh, cry, and reflect. I recommend Her by Spike Jonze and The Dark Knight by Christopher Nolan',
-  coffee: 'I have a confession. I\'m addicted to coffee. Fun fact, order a double espresso over ice, add your own milk, and save $2',
+  coffee: 'I\'m addicted to coffee. Fun fact, order a double espresso over ice, add your own milk, and save $2',
   personality: 'I am an outspoken individual who never passes up an oppurtunity to make someone laugh',
   transport: 'Preferred mode of transport: bicycle. Fast, efficient, and healthy'
 };
@@ -68,8 +68,7 @@ export class AboutLayout extends Component {
           <Grid
             container
             justify='space-around'
-            className='mt-4'
-            xl='1'>
+            className='mt-4'>
             <div>
               <div item='true' style={styles.aboutInfo}>
                 <AboutInfo text={texts.hk} icon={HK} header='home' />
