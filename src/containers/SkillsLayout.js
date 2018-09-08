@@ -1,14 +1,13 @@
 import React from 'react';
-import { Stepper, Step, StepLabel, StepContent, Typography, Grid, IconButton } from '@material-ui/core';
-import { Languages } from '../components/skills/Languages';
-import { Technologies } from '../components/skills/Technologies';
-import { Other } from '../components/skills/Other';
+import { Typography, Grid, IconButton, Label, Button, Collapse } from '@material-ui/core';
+import SkillInfo from '../components/SkillInfo';
+import { SKILLS } from '../constants/skillsConstants';
 
 const styles = {
     wrapper: {
         display: 'block',
         overflow: 'auto',
-        backgroundColor: '#f4f4f4'
+        backgroundColor: '#f4f4f4',
     },
     stepperWrapper: {
         backgroundColor: '#f4f4f4',
@@ -22,57 +21,63 @@ const styles = {
         backgroundColor: '#ffffff',
         borderRadius: 15,
         marginTop: 80,
-        marginBottom: 50,
+
     },
+    sizing: {
+        width: 300,
+        height: 500,
+    },
+    languagesBox: {
+        backgroundColor: '#ffffff',
+        marginTop: 50,
+        borderRadius: '15px 10px 10px',
+    }
 };
 
-
-function getSteps() {
-    return ['Languages', 'Technologies', 'Other'];
-}
-
-function getStepContent(step) {
-    switch (step) {
-        case 0:
-            return <Languages className='ml-5' />;
-        case 1:
-            return <Technologies />;
-        case 2:
-            return <Other />;
-        default:
-            return 'Unknown step';
-    }
-}
-
 class SkillsLayout extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleNext = this.handleNext.bind(this);
-        this.handleBack = this.handleBack.bind(this);
-        this.state = {
-            activeStep: 0,
-        };
+
+    renderListOfLanguages() {
+        let languages = SKILLS.languages.infos.map((info, index) => {
+            return <SkillInfo color='primary' text={info.text} icon={info.icon} progress={info.progress} key={index} />;
+        });
+        return languages;
+    }
+    renderListOfFrontEnd() {
+        let frontend = SKILLS.frontend.infos.map((info, index) => {
+            return <SkillInfo color='secondary' text={info.text} icon={info.icon} progress={info.progress} key={index} />;
+        });
+        return frontend;
+    }
+    renderListOfBackEnd() {
+        let backend = SKILLS.backend.infos.map((info, index) => {
+            return <SkillInfo color='primary' text={info.text} icon={info.icon} progress={info.progress} key={index} />;
+        });
+        return backend;
+    }
+    renderListOfDesign() {
+        let design = SKILLS.design.infos.map((info, index) => {
+            return <SkillInfo color='secondary' text={info.text} icon={info.icon} progress={info.progress} key={index} />;
+        });
+        return design;
+    }
+    renderListOfServices() {
+        let services = SKILLS.services.infos.map((info, index) => {
+            return <SkillInfo color='primary' text={info.text} icon={info.icon} progress={info.progress} key={index} />;
+        });
+        return services;
     }
 
-    handleNext() {
-        this.setState({
-            activeStep: this.state.activeStep + 1,
+    renderListOfOther() {
+        let other = SKILLS.other.infos.map((info, index) => {
+            return <SkillInfo color='secondary' text={info.text} icon={info.icon} progress={info.progress} key={index} />;
         });
-    };
+        return other;
+    }
 
-    handleBack() {
-        this.setState({
-            activeStep: this.state.activeStep - 1,
-        });
-    };
 
     render() {
-        const steps = getSteps();
-        const { activeStep } = this.state;
-
         return (
-            <Grid
-                style={styles.wrapper}>
+            <div style={styles.wrapper}>
                 <Grid
                     container
                     alignItems='center'
@@ -83,48 +88,51 @@ class SkillsLayout extends React.Component {
                         item='true'
                         style={styles.titleHeader}>
                         skills
-          </Typography>
-                    <div style={styles.stepperWrapper}>
-                        <Stepper
-                            style={styles.wrapper}
-                            activeStep={activeStep}
-                            orientation="vertical">
-                            {steps.map((label, index) => {
-                                return (
-                                    <Step key={label}>
-                                        <StepLabel className='text-secondary'>{label}</StepLabel>
-                                        <StepContent>
-                                            {getStepContent(index)}
-                                            <div>
-                                            </div>
-                                            <div className='float-right mt-2'>
-                                                <IconButton
-                                                    disabled={activeStep == 0 && true}
-                                                    variant='raised'
-                                                    color='primary'
-                                                    style={{ outline: 'none' }}
-                                                    onClick={this.handleBack}>
-                                                    <i className="fa fa-chevron-circle-up"></i>
-                                                </IconButton>
-                                                <IconButton
-                                                    disabled={activeStep === steps.length - 1 && true}
-                                                    variant='raised'
-                                                    color='primary'
-                                                    style={{ outline: 'none' }}
-                                                    onClick={this.handleNext}>
-                                                    <i className="fa fa-chevron-circle-down"></i>
-                                                </IconButton>
-                                            </div>
-                                        </StepContent>
-                                    </Step>
-                                );
-                            })}
-                        </Stepper>
+                    </Typography>
+                </Grid>
+
+                <Grid
+                    container
+                    direction='row'
+                    justify='space-around'>
+                    <div>
+                        <div container style={styles.languagesBox}>
+                            <Typography align='center' variant='display1' className='mb-2 pt-5'>
+                                Languages
+                            </Typography>
+                            {this.renderListOfLanguages()}
+                        </div>
+                        
+                        <Typography variant='display1' className='mb-2 mt-5'>
+                            Design
+                        </Typography>
+                        {this.renderListOfDesign()}
+                        <Typography variant='display1' className='mb-2 mt-5'>
+                            Services
+                    </Typography>
+                        {this.renderListOfServices()}
+                    </div>
+                    <div>
+                        <Typography variant='display1' className='mb-2 mt-5'>
+                            Frontend
+                        </Typography>
+                        {this.renderListOfFrontEnd()}
+                        <Typography variant='display1' className='mb-2 mt-5'>
+                            Backend
+                    </Typography>
+                        {this.renderListOfBackEnd()}
+                        <Typography variant='display1' className='mb-2 mt-5'>
+                            Other
+                    </Typography>
+                        {this.renderListOfOther()}
                     </div>
                 </Grid>
-            </Grid>
+                <div style={styles.titleSpacing}>
+                </div>
+            </div>
         );
     }
+
 }
 
 export default SkillsLayout;
