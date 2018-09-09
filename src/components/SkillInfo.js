@@ -54,14 +54,12 @@ class SkillInfo extends React.Component {
                 container
                 direction='row'
                 justify='center'>
-
                 <Grid
                     align='center'
                     style={styles.iconWrapper}>
                     <img src={this.props.icon} style={styles.icon} />
                     <Typography
                         className='mt-2'
-                        color={this.props.color}
                         variant='caption'
                         align='center'>
                         {this.props.text}

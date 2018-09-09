@@ -135,11 +135,11 @@ export const SKILLS = {
             {
                 text: 'Amazon Web Services',
                 icon: AWS,
-                progress: 50
+                progress: 30
             }, {
                 text: 'Heroku',
                 icon: Heroku,
-                progress: 60
+                progress: 30
 
             }
         ]
@@ -153,11 +153,11 @@ export const SKILLS = {
             }, {
                 text: 'Postman',
                 icon: Postman,
-                progress: 60
+                progress: 40
             }, {
                 text: 'My SQL Workbench',
                 icon: MySQL,
-                progress: 60
+                progress: 50
             }
         ]
     }

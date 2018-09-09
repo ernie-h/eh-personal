@@ -18,10 +18,16 @@ export class ProjectsLayout extends Component {
                 </div>
                 <Grid
                     container
-                    justify='center'>
+                    direction='column'
+                    alignItems='center'>
                     <Typography variant='display4' item='true'>
                         Projects
               </Typography>
+              <br/>
+              <Typography variant='caption'>
+                coming soon...but heres a link to my <a href='https://github.com/ernie-h'>Github</a> for now
+              </Typography>
+     
                 </Grid>
                 <div style={styles.titleSpacing}>
                 </div>

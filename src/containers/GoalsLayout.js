@@ -4,6 +4,9 @@ import { Grid, Typography } from '@material-ui/core';
 import Teddy from '../assets/tr.png';
 import { ValueInfo } from '../components/ValueInfo';
 
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css';
+
 const styles = {
     wrapper: {
         display: 'block',
@@ -47,8 +50,8 @@ const texts = {
 export class GoalsLayout extends Component {
     render() {
         return (
-            <Grid 
-                container 
+            <Grid
+                container
                 style={styles.wrapper}>
                 <div style={styles.titleSpacing}>
                 </div>
@@ -64,24 +67,38 @@ export class GoalsLayout extends Component {
                         style={styles.header}>
                         values
                     </Typography>
-                    <div style={styles.valueInfoBox}>
-                        <ValueInfo text={texts.one} />
-                    </div>
-                    <div style={styles.valueInfoBox}>
-                        <ValueInfo text={texts.two} />
-                    </div>
-                    <div style={styles.valueInfoBox}>
-                        <ValueInfo text={texts.three} />
-                    </div>
-                    <div style={styles.valueInfoBox}>
-                        <ValueInfo text={texts.four} />
-                    </div>
-                    <div style={styles.valueInfoBox}>
-                        <ValueInfo text={texts.five} />
-                    </div>
-                    <div style={styles.valueInfoBox}>
-                        <ValueInfo text={texts.six} />
-                    </div>
+                    <ScrollAnimation animateIn='slideInUp'>
+                        <div style={styles.valueInfoBox}>
+                            <ValueInfo text={texts.one} />
+                        </div>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn='slideInUp'>
+
+                        <div style={styles.valueInfoBox}>
+                            <ValueInfo text={texts.two} />
+                        </div>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn='slideInUp'>
+
+                        <div style={styles.valueInfoBox}>
+                            <ValueInfo text={texts.three} />
+                        </div>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn='slideInUp'>
+                        <div style={styles.valueInfoBox}>
+                            <ValueInfo text={texts.four} />
+                        </div>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn='slideInUp'>
+                        <div style={styles.valueInfoBox}>
+                            <ValueInfo text={texts.five} />
+                        </div>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn='slideInUp'>
+                        <div style={styles.valueInfoBox}>
+                            <ValueInfo text={texts.six} />
+                        </div>
+                    </ScrollAnimation>
                 </Grid>
                 <div style={styles.titleSpacing}>
                 </div>
