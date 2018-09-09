@@ -6,7 +6,6 @@ const styles = {
     icon: {
         width: 48,
         height: 48,
-        marginTop: 30,
     },
     header: {
         color: '#2d80c4',
@@ -17,13 +16,13 @@ const styles = {
         marginBottom: 20
     },
     progressSpacing: {
-        width: 420,
-        marginTop: 50,
-        marginRight: 50,
-
+        display: 'block',
+        overflow: 'auto',
+        width: '400px',
+        maxWidth: '100%',
+        margin: '0 50px 50px 50px'
     }
 };
-
 class SkillInfo extends React.Component {
     constructor(props) {
         super(props);
@@ -54,16 +53,16 @@ class SkillInfo extends React.Component {
             <Grid
                 container
                 direction='row'
-                justify='flex-start'>
+                justify='center'>
 
                 <Grid
                     align='center'
                     style={styles.iconWrapper}>
                     <img src={this.props.icon} style={styles.icon} />
                     <Typography
-                        style={styles.text}
-                        className='text-secondary rounded pt-2 pb-2 pl-2 pr-2'
-                        variant='body2'
+                        className='mt-2'
+                        color={this.props.color}
+                        variant='caption'
                         align='center'>
                         {this.props.text}
                     </Typography>
@@ -87,7 +86,10 @@ class SkillInfo extends React.Component {
                             Expert
                     </Typography>
                     </Grid>
-                    <LinearProgress color={this.props.color} variant="determinate" value={this.state.completed} />
+                    <LinearProgress
+                        color={this.props.color}
+                        variant="determinate"
+                        value={this.state.completed} />
                 </div>
             </Grid>
         );

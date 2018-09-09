@@ -27,8 +27,13 @@ const styles = {
         width: 300,
         height: 500,
     },
-    languagesBox: {
+    whiteBox: {
         backgroundColor: '#ffffff',
+        marginTop: 50,
+        borderRadius: '15px 10px 10px',
+    },
+    blueBox: {
+        backgroundColor: '#2d80c4',
         marginTop: 50,
         borderRadius: '15px 10px 10px',
     }
@@ -66,14 +71,12 @@ class SkillsLayout extends React.Component {
         });
         return services;
     }
-
     renderListOfOther() {
         let other = SKILLS.other.infos.map((info, index) => {
             return <SkillInfo color='secondary' text={info.text} icon={info.icon} progress={info.progress} key={index} />;
         });
         return other;
     }
-
 
     render() {
         return (
@@ -95,36 +98,45 @@ class SkillsLayout extends React.Component {
                     container
                     direction='row'
                     justify='space-around'>
-                    <div>
-                        <div container style={styles.languagesBox}>
-                            <Typography align='center' variant='display1' className='mb-2 pt-5'>
+                    <div className='grid-1'>
+                        <div container style={styles.whiteBox}>
+                            <Typography align='center' variant='display1' className='mb-5 pt-5'>
                                 Languages
                             </Typography>
                             {this.renderListOfLanguages()}
                         </div>
-                        
-                        <Typography variant='display1' className='mb-2 mt-5'>
-                            Design
+                        <div container style={styles.blueBox}>
+                            <Typography align='center' variant='display1' className='mb-5 pt-5'>
+                                Design
                         </Typography>
-                        {this.renderListOfDesign()}
-                        <Typography variant='display1' className='mb-2 mt-5'>
-                            Services
-                    </Typography>
-                        {this.renderListOfServices()}
+                            {this.renderListOfDesign()}
+                        </div>
+                        <div container style={styles.whiteBox}>
+                            <Typography align='center' variant='display1' className='mb-5 pt-5'>
+                                Services
+                            </Typography>
+                            {this.renderListOfServices()}
+                        </div>
                     </div>
-                    <div>
-                        <Typography variant='display1' className='mb-2 mt-5'>
-                            Frontend
+                    <div className='grid-2'>
+                        <div container style={styles.blueBox}>
+                            <Typography align='center' variant='display1' className='mb-5 pt-5'>
+                                Frontend
                         </Typography>
-                        {this.renderListOfFrontEnd()}
-                        <Typography variant='display1' className='mb-2 mt-5'>
-                            Backend
-                    </Typography>
-                        {this.renderListOfBackEnd()}
-                        <Typography variant='display1' className='mb-2 mt-5'>
-                            Other
-                    </Typography>
-                        {this.renderListOfOther()}
+                            {this.renderListOfFrontEnd()}
+                        </div>
+                        <div container style={styles.whiteBox}>
+                            <Typography align='center' variant='display1' className='mb-5 pt-5'>
+                                Backend
+                        </Typography>
+                            {this.renderListOfBackEnd()}
+                        </div>
+                        <div container style={styles.blueBox}>
+                            <Typography align='center' variant='display1' className='mb-5 pt-5'>
+                                Other
+                             </Typography>
+                            {this.renderListOfOther()}
+                        </div>
                     </div>
                 </Grid>
                 <div style={styles.titleSpacing}>
@@ -132,7 +144,6 @@ class SkillsLayout extends React.Component {
             </div>
         );
     }
-
 }
 
 export default SkillsLayout;
