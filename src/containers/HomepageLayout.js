@@ -35,7 +35,7 @@ export class HomepageLayout extends Component {
                     alignItems='center'
                 >
                     <Typography variant='title' item='true' style={styles.text}>
-                        <em>Hiya, I'm</em>
+                        <em>Hello, I'm</em>
                     </Typography>
 
                     <Typography className="bg-light rounded pl-3 pr-3 mt-2" variant='display3' item='true' style={styles.name}>
