@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grow, Grid, Typography, Collapse } from '@material-ui/core';
+import { Grid, Typography, Collapse } from '@material-ui/core';
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
 
@@ -47,24 +47,27 @@ export class ContactLayout extends Component {
                         direction='row'
                         justify='center'>
                         <Typography align='center' variant='display3' color='primary'>
-                            Let's get in contact.
-                    </Typography>
+                            Let's get in contact
+                         </Typography>
                         <Grid
                             container
                             direction='row'
-                            justify='center'>
-                            <a href='https://www.linkedin.com/in/ernie-hao-641871113/'>
-                                <img className='ml-5 mr-5' src={LinkedIn} style={styles.icon} onClick={() => this.setState({ open: !this.state.open })} />
+                            justify='center'
+                            className='mr-5'>
+                            <a href='https://www.linkedin.com/in/ernie-hao/'>
+                                <img className='ml-5 mr-2' src={LinkedIn} style={styles.icon} onClick={() => this.setState({ open: !this.state.open })} />
                             </a>
-                            <div>
+                            <Grid
+                                direction='column'
+                                align='center'
+                                className='mt-1'>
                                 <img src={Gmail} style={styles.icon} onClick={() => this.setState({ open: !this.state.open })} />
-
                                 <Collapse in={this.state.open}>
-                                    <Typography variant='body1' className='mr-5'>
-                                        pdphiro@gmail.com
-                                </Typography>
+                                    <Typography variant='body1'>
+                                        hao.e@husky.neu.edu
+                                    </Typography>
                                 </Collapse>
-                            </div>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </ScrollAnimation>
