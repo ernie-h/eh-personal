@@ -39,26 +39,26 @@ var styles = {
         top: '30px'
     },
     bmBurgerBars: {
-        background: '#373a47'
+        background: '#ffffff'
     },
     bmCrossButton: {
         height: '24px',
         width: '24px'
     },
     bmCross: {
-        background: '#bdc3c7'
+        background: '#ffffff'
     },
     bmMenu: {
         background: '#2d80c4',
         padding: '2.5em 1.5em 0',
         fontSize: '1.15em',
-        borderLeft: 'grey solid 20px'
+        borderRadius: '15px solid',
     },
     bmMorphShape: {
-        fill: '#373a47'
+        fill: '#ffffff'
     },
     bmItemList: {
-        color: '#b8b7ad',
+        color: '#ffffff',
         padding: '0.8em'
     },
     bmItem: {
@@ -89,7 +89,7 @@ class App extends React.Component {
                     </AnchorLink>
                     <br />
                     <AnchorLink className="menu-item" href="#about">
-                        <Typography variant='display2'>About</Typography>
+                        <Typography variant='display1'>About</Typography>
                     </AnchorLink>
                     <br />
                     <AnchorLink className="menu-item" href="#values">
@@ -97,7 +97,7 @@ class App extends React.Component {
                     </AnchorLink>
                     <br />
                     <AnchorLink className="menu-item" href="#projects">
-                        <Typography variant='display2'>Projects</Typography>
+                        <Typography variant='display1'>Projects</Typography>
                     </AnchorLink>
                     <br />
                     <AnchorLink className="menu-item" href="#contact">
