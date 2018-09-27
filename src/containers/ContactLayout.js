@@ -5,6 +5,7 @@ import 'animate.css/animate.min.css';
 
 import LinkedIn from '../assets/icons/linkedin.png';
 import Gmail from '../assets/icons/gmail.png';
+import Github from '../assets/githubContact.png';
 
 const styles = {
     wrapper: {
@@ -19,10 +20,15 @@ const styles = {
         color: '#2d80c4'
     },
     icon: {
-        width: 100,
-        height: 100,
+        width: 64,
+        height: 64,
         marginTop: 30,
     },
+    icon2: {
+        width: 50,
+        height: 50,
+        marginTop: 38,
+    }
 };
 
 export class ContactLayout extends Component {
@@ -47,28 +53,30 @@ export class ContactLayout extends Component {
                         direction='row'
                         justify='center'>
                         <Typography align='center' variant='display3' color='primary'>
-                            Let's get in contact
+                            Let's get in contact.
                          </Typography>
                         <Grid
                             container
                             direction='row'
-                            justify='center'
-                            className='mr-5'>
+                            justify='center'>
                             <a href='https://www.linkedin.com/in/ernie-hao/'>
-                                <img className='ml-5 mr-2' src={LinkedIn} style={styles.icon} onClick={() => this.setState({ open: !this.state.open })} />
+                                <img className='' src={LinkedIn} style={styles.icon} />
                             </a>
+                            <a href='https://github.com/ernie-h'>
+                                <img className='' src={Github} style={styles.icon2} />
+                            </a>
+                            <img src={Gmail} style={styles.icon} className='ml-2 pt-2' onClick={() => this.setState({ open: !this.state.open })} />
+                        </Grid>
                             <Grid
                                 direction='column'
                                 align='center'
                                 className='mt-1'>
-                                <img src={Gmail} style={styles.icon} onClick={() => this.setState({ open: !this.state.open })} />
                                 <Collapse in={this.state.open}>
                                     <Typography variant='body1'>
                                         hao.e@husky.neu.edu
                                     </Typography>
                                 </Collapse>
                             </Grid>
-                        </Grid>
                     </Grid>
                 </ScrollAnimation>
                 <div style={styles.titleSpacing}>
