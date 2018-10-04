@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, IconButton, Label, Button, Collapse } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import SkillInfo from '../components/SkillInfo';
 import { SKILLS } from '../constants/skillsConstants';
 

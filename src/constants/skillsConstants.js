@@ -34,16 +34,16 @@ export const SKILLS = {
             {
                 text: 'HTML5',
                 icon: HTML,
-                progress: 70
+                progress: 65
             }, {
                 text: 'CSS3',
                 icon: CSS,
-                progress: 60
+                progress: 55
 
             }, {
                 text: 'JS (ES5/ES6)',
                 icon: JS,
-                progress: 80
+                progress: 65
 
             }, {
                 text: 'Java',
@@ -53,11 +53,11 @@ export const SKILLS = {
             }, {
                 text: 'SQL',
                 icon: SQL,
-                progress: 60
+                progress: 50
             }, {
                 text: 'Ruby',
                 icon: Ruby,
-                progress: 50
+                progress: 40
             }, {
                 text: 'TypeScript',
                 icon: TS,
@@ -70,16 +70,16 @@ export const SKILLS = {
             {
                 text: 'React JS/Native',
                 icon: ReactIcon,
-                progress: 70
+                progress: 65
             }, {
                 text: 'Angular',
                 icon: Angular,
-                progress: 60
+                progress: 45
 
             }, {
                 text: 'Rails',
                 icon: Rails,
-                progress: 40
+                progress: 45
 
             }
         ]
@@ -89,30 +89,30 @@ export const SKILLS = {
             {
                 text: 'Node.js',
                 icon: Node,
-                progress: 60
+                progress: 50
             }, {
                 text: 'Express.js',
                 icon: Express,
-                progress: 50
+                progress: 40
 
             }, {
                 text: 'Spring',
                 icon: Spring,
-                progress: 50
+                progress: 45
 
             }, {
                 text: 'JPA',
                 icon: JPA,
-                progress: 60
+                progress: 45
             }, {
                 text: 'SQLDB',
                 icon: SQLDB,
-                progress: 70
+                progress: 65
 
             }, {
                 text: 'MongoDB',
                 icon: Mongo,
-                progress: 60
+                progress: 55
             }
         ]
     },
@@ -121,11 +121,11 @@ export const SKILLS = {
             {
                 text: 'Bootstrap',
                 icon: Bootstrap,
-                progress: 80
+                progress: 65
             }, {
                 text: 'Material UI',
                 icon: Material,
-                progress: 60
+                progress: 65
 
             }
         ]
@@ -135,11 +135,11 @@ export const SKILLS = {
             {
                 text: 'Amazon Web Services',
                 icon: AWS,
-                progress: 30
+                progress: 45
             }, {
                 text: 'Heroku',
                 icon: Heroku,
-                progress: 30
+                progress: 45
 
             }
         ]
@@ -149,15 +149,15 @@ export const SKILLS = {
             {
                 text: 'Git/Github',
                 icon: Git,
-                progress: 80
+                progress: 75
             }, {
                 text: 'Postman',
                 icon: Postman,
-                progress: 40
+                progress: 50
             }, {
                 text: 'My SQL Workbench',
                 icon: MySQL,
-                progress: 50
+                progress: 65
             }
         ]
     }
